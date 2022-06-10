@@ -37,10 +37,24 @@ public class Gryffindor extends HogwartsSchool {
 
     @Override
     public String toString() {
-        return "Gryffindor{" +
+        return "Gryffindor{" + super.toString() +
                 "nobility=" + nobility +
                 ", honor=" + honor +
                 ", bravery=" + bravery +
                 '}';
+    }
+
+    public void comparisonOfGryffindorStudents(Gryffindor[] gryffindor) {
+        int max = 0;
+        Gryffindor theBest = null;
+        for (int i = 0; i < gryffindor.length; i++) {
+            int summ = gryffindor[i].nobility + gryffindor[i].honor + gryffindor[i].bravery;
+            if(summ > max) {
+                max = summ;
+                theBest = gryffindor[i];
+            }
+        }
+        System.out.println();
+
     }
 }
