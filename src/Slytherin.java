@@ -54,4 +54,16 @@ public class Slytherin extends HogwartsSchool {
                 ", thirstForPower=" + thirstForPower +
                 '}';
     }
+
+    public static void comparisonOfStudents(Slytherin firstStudent,  Slytherin secondStudent) {
+
+        int summ1 = firstStudent.cunning + firstStudent.determination + firstStudent.ambition + firstStudent.thirstForPower;
+        int summ2 = secondStudent.cunning + secondStudent.determination + secondStudent.ambition + secondStudent.thirstForPower;
+
+        if(summ1 > summ2){
+            System.out.println(firstStudent.getName() + " лучший Слизериновец, чем " + secondStudent.getName());
+        } else {
+            System.out.println(secondStudent.getName() + " лучший Слизериновец, чем " + firstStudent.getName());
+        }
+    }
 }

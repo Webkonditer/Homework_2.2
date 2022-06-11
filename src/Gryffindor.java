@@ -44,17 +44,16 @@ public class Gryffindor extends HogwartsSchool {
                 '}';
     }
 
-    public void comparisonOfGryffindorStudents(Gryffindor[] gryffindor) {
-        int max = 0;
-        Gryffindor theBest = null;
-        for (int i = 0; i < gryffindor.length; i++) {
-            int summ = gryffindor[i].nobility + gryffindor[i].honor + gryffindor[i].bravery;
-            if(summ > max) {
-                max = summ;
-                theBest = gryffindor[i];
-            }
+    public static void comparisonOfStudents(Gryffindor firstStudent,  Gryffindor secondStudent) {
+
+        int summ1 = firstStudent.nobility + firstStudent.honor + firstStudent.bravery;
+        int summ2 = secondStudent.nobility + secondStudent.honor + secondStudent.bravery;
+
+        if(summ1 > summ2){
+            System.out.println(firstStudent.getName() + " лучший Гриффиндорец, чем " + secondStudent.getName());
+        } else {
+            System.out.println(secondStudent.getName() + " лучший Гриффиндорец, чем " + firstStudent.getName());
         }
-        System.out.println();
 
     }
 }

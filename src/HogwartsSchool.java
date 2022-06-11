@@ -40,4 +40,17 @@ public class HogwartsSchool {
                 ", distanceOfTransgression=" + distanceOfTransgression +
                 ", ";
     }
+
+    public static void comparisonOfStudents(HogwartsSchool firstStudent,  HogwartsSchool secondStudent) {
+
+        int summ1 = firstStudent.powerOfMagic + firstStudent.distanceOfTransgression;
+        int summ2 = secondStudent.powerOfMagic + secondStudent.distanceOfTransgression;
+
+        if(summ1 > summ2){
+            System.out.println(firstStudent.getName() + " лучший студент, чем " + secondStudent.getName());
+        } else {
+            System.out.println(secondStudent.getName() + " лучший студент, чем " + firstStudent.getName());
+        }
+
+    }
 }

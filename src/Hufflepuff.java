@@ -43,5 +43,18 @@ public class Hufflepuff extends HogwartsSchool {
                 ", honesty=" + honesty +
                 '}';
     }
+
+    public static void comparisonOfStudents(Hufflepuff firstStudent,  Hufflepuff secondStudent) {
+
+        int summ1 = firstStudent.diligence + firstStudent.loyalty + firstStudent.honesty;
+        int summ2 = secondStudent.diligence + secondStudent.loyalty + secondStudent.honesty;
+
+        if(summ1 > summ2){
+            System.out.println(firstStudent.getName() + " лучший Пуффендуец, чем " + secondStudent.getName());
+        } else {
+            System.out.println(secondStudent.getName() + " лучший Пуффендуец, чем " + firstStudent.getName());
+        }
+
+    }
 }
 
